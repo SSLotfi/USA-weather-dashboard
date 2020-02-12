@@ -40,7 +40,7 @@ def ProcessData(res):
 
     states_dic = {k: v for k, v in sorted(states_dic.items(), key=lambda item: item[1])}
 
-    Hotest_state = states_dic[0]
-    Hotest_temp = states_dic[0][1]
+    Hotest_state = list(states_dic.keys())[0]
+    Hotest_temp = list(states_dic.values())[0]
 
     return Hotest_state,Hotest_temp

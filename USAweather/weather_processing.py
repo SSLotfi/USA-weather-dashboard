@@ -25,22 +25,24 @@ def GetWeatherData():
         except:
             res = dict()
 
-    return res
+    return states_dic
 
 def ProcessData(res):
-    states_dic = dict()
+    Hotest_state = list(res.keys())[0]
+    Hotest_temp = list(res.values())[0]
+    # states_dic = dict()
 
-    for state in states:
-        states_dic[state] = 99999;
+    # for state in states:
+    #     states_dic[state] = 99999;
 
-    try:
-        states_dic[state] = res['main']['temp']
-    except:
-        res = dict()
+    # try:
+    #     states_dic[state] = res['main']['temp']
+    # except:
+    #     res = dict()
 
-    states_dic = {k: v for k, v in sorted(states_dic.items(), key=lambda item: item[1])}
+    # states_dic = {k: v for k, v in sorted(states_dic.items(), key=lambda item: item[1])}
 
-    Hotest_state = list(states_dic.keys())[0]
-    Hotest_temp = list(states_dic.values())[0]
+    # Hotest_state = list(states_dic.keys())[0]
+    # Hotest_temp = list(states_dic.values())[0]
 
     return Hotest_state,Hotest_temp

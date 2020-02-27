@@ -47,6 +47,7 @@ def index():
 
         if validation_text == "State exists":
             validation_text = ""
+        else:
             cityname = ""
         
         return render_template("mainpage.html",Hotest_state = Hotest_state,Hotest_temp = Hotest_temp,
